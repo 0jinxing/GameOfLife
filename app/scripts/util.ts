@@ -46,13 +46,8 @@ export class Util {
             // 5. 世界有小概率发生改变
             Math.random() * 1000000 < 10 && (dot.hasChange = !dot.hasChange);
         })
-        ds.forEach((dot) => {
-            dot.hasChange && (dot.hasLift = !dot.hasLift);
-            dot.hasChange = false;
-            dot.nearLiftCount = 0;
-        });
     }
-    public static draw(ds: Array<Dot>, ctx: CanvasRenderingContext2D) {
+    public static draw(ds: Array<Dot>, ctx: CanvasRenderingContext2D, init?: boolean) {
         // 双缓冲
         if (!Util._bufferCanvas || !Util._bufferCtx) {
             Util._bufferCanvas = document.createElement("canvas");
@@ -61,7 +56,15 @@ export class Util {
             let bufferCtx = Util._bufferCanvas.getContext("2d");
             bufferCtx && (Util._bufferCtx = bufferCtx);
         }
-        ds.forEach((d, ind) => Util.drawDot(d, ind, Util._bufferCtx));
+        ds.forEach((dot, ind) => {
+            dot.hasChange && (dot.hasLift = !dot.hasLift);
+
+            dot.hasChange && Util.drawDot(dot, ind, Util._bufferCtx);
+            init && Util.drawDot(dot, ind, Util._bufferCtx);
+
+            dot.hasChange = false;
+            dot.nearLiftCount = 0;
+        });
         ctx.drawImage(Util._bufferCanvas, 0, 0);
     }
     private static drawDot(dot: Dot, ind: number, ctx: CanvasRenderingContext2D) {

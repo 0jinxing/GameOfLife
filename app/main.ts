@@ -19,10 +19,7 @@ function stop() {
 }
 function run() {
     isRun = true;
+    World.ctx && Util.draw(World.dots, World.ctx, true)
     game();
 }
-
-$("#game_canvas")[0].oncontextmenu = function () {
-    return false;
-};
 run();
