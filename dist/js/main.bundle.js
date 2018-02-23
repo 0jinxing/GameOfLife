@@ -149,7 +149,7 @@ exports = module.exports = __webpack_require__(4)(false);
 
 
 // module
-exports.push([module.i, "html,\r\nbody {\r\n    width: 100%;\r\n    height: 100%;\r\n}\r\n\r\n.container {\r\n    margin: 0 auto;\r\n    width: 75%;\r\n}\r\n\r\n.row {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n\r\n.col-4 {\r\n    flex: 1 4 auto;\r\n}\r\n\r\n.col-8 {\r\n    flex: 1 8 auto;\r\n}\r\n\r\n.page-header {\r\n    padding-bottom: 9px;\r\n    margin: 40px 0 20px;\r\n    border-bottom: 1px solid #eee;\r\n    font-family: inherit;\r\n    font-weight: 500;\r\n    line-height: 1.1;\r\n    color: inherit;\r\n    font-size: 36px;\r\n}", ""]);
+exports.push([module.i, ".instructions {\r\n    font-family: \"\\65B0\\5B8B\\4F53\";\r\n}\r\n\r\n.instructions li {\r\n    margin-bottom: 6px;\r\n}\r\n\r\n.container {\r\n    margin: 0 auto;\r\n    width: 75%;\r\n}\r\n\r\n.row {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n    flex-direction: row;\r\n    justify-content: center;\r\n}\r\n\r\n.col-4 {\r\n    flex: 1 4 auto;\r\n}\r\n\r\n.col-8 {\r\n    flex: 1 8 auto;\r\n}\r\n\r\n.page-header {\r\n    padding-bottom: 9px;\r\n    margin: 40px 0 20px;\r\n    border-bottom: 1px solid #eee;\r\n    font-family: inherit;\r\n    font-weight: 500;\r\n    line-height: 1.1;\r\n    color: inherit;\r\n    font-size: 36px;\r\n}", ""]);
 
 // exports
 
