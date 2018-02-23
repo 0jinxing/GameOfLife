@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>game of life</title>
+</head>
+
+<body>
+    <div hidden>
+        
+    </div>
+    <div class="container">
+        <h1 class="page-header">生命游戏</h1>
+        <div class="row">
+            <div class="col-4">游戏规则
+                <ol>
+                    <li>如果一个生命周围的生命少于2个,则在回合结束时死亡</li>
+                    <li>如果一个生命周围的生命超过3个,它也在回合结束时死亡</li>
+                    <li>如果死格子周围有3个生命,它就在回合结束时获得生命</li>
+                    <li>如果一个生命周围有2或3个生命,它在回合结束时保持原样</li>
+                    <li>世界有小概率发生改变(我自己加的规则)</li>
+                </ol>
+            </div>
+            <div class="col-8">
+                <canvas id="game_canvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="js/main.bundle.js?27bbd6945eb24771248b"></script></body>
+
+</html>
