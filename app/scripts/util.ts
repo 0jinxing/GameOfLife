@@ -43,8 +43,6 @@ export class Util {
             // 3. 如果死格子周围有3个生命,它就在回合结束时获得生命
             !dot.hasLift && dot.nearLiftCount == 3 && (dot.hasChange = true);
             // 4. 如果一个生命周围有2或3个生命,它在回合结束时保持原样
-            // 5. 世界有小概率发生改变
-            Math.random() * 1000000 < 10 && (dot.hasChange = !dot.hasChange);
         })
     }
     public static draw(ds: Array<Dot>, ctx: CanvasRenderingContext2D, init?: boolean) {
